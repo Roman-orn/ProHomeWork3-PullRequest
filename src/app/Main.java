@@ -1,8 +1,8 @@
 package app;
 
 public class Main {
-    static final double CONS1 = 32;
-    static final double CONS2 = 1.8;
+    static final double OFFSET = 32;
+    static final double SCALING_FACTOR = 1.8;
 
     static void main() {
         System.out.println("App converter temperature");
@@ -16,10 +16,10 @@ public class Main {
     }
 
     static double fahrenheitToCelsius(double frt){
-        return (frt - CONS1) / CONS2;
+        return (frt - OFFSET) / SCALING_FACTOR;
     }
 
     static double celsiusToFahrenheit(double cls){
-        return cls * CONS2 + CONS1;
+        return cls * SCALING_FACTOR + OFFSET;
     }
 }
